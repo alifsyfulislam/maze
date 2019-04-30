@@ -37,7 +37,7 @@ class Maze {
     this.backgroundColor = "#88FF88";
     this.cols = cols;
     this.endColor = "#42d7f4";
-    this.mazeColor = "#ceaef8";
+    this.mazeColor = "#000000";
     this.playerColor = "#ff0000";
     this.rows = rows;
     this.cellSize = cellSize;
@@ -245,6 +245,11 @@ setInterval(function () {
   document.getElementById('counter').innerText = count;
     if (player.row==9 && player.col == 9){
         document.getElementById('counter').innerText = "You win with "+count;
+        setTimeout(function () {
+           onLoad();
+           count = 0;
+            document.getElementById('counter').innerText = count;
+        },500)
     }
 },1000);
 

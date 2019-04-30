@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script src="default.js"></script>
+    <title>maze</title>
+    <style>
+      * {
+        font-family: Georgia;
+        margin: 0;
+        padding:0;
+      }
+      body,html{
+        height: 250px;
+        width: 300px;
+        position: relative;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .maze_border{
+        height: 250px;
+        width: 300px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px 35px 0px 35px;
+        background-color: orange;
+      }
+
+      #moves{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body onload="onLoad();">
+    <div class="maze_border">
+      <span id="moves"><span id="counter">0</span> moves!</span>
+      <canvas id="mainForm"></canvas>
+    </div>
+  </body>
+</html>
